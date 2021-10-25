@@ -92,6 +92,25 @@ body{
   margin-bottom: 50px;
 }
 
+.slider-buttons{
+  position: absolute;
+  right: 46px;
+  bottom: 80px;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  justify-content: space-between;
+}
+
+.slider-button{
+   cursor: pointer;
+}
+
+.swiper{
+  position: relative;
+}
+
 .slide-text-light{
   position: relative;
   background: grey;
@@ -113,6 +132,7 @@ body{
   font-size: 16px;
   line-height: 23px;
   margin-bottom: 30px;
+  max-width: 400px;
 }
 .button-primary{
   position: relative;
@@ -134,6 +154,19 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.slide-autumn{
+  background-image: url("img/autumn vegetables.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vitamin-week{
+  background-image: url("img/vitamin-week.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .slide::before{
   content: '';
   position: absolute;
@@ -546,4 +579,64 @@ body{
 .social-link{
   text-decoration: none;
   margin-left: 20px;
+}
+
+@media (max-width: 1260px;){
+  .container{
+    max-width: 960px;
+  }
+  .search-form{
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .tabs-content{
+    flex-wrap: wrap;
+  }
+  .tabs-card{
+    flex: 50%;
+    max-width: calc(50%-30px);
+  }
+}
+
+@media (max-width: 992px;){
+  .container{
+    max-width: 760px;
+  }
+  .slide{
+    padding: 70px;
+  }
+  .delivery-card{
+    width: calc(50%-30px);
+  }
+  .footer-logo{
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 768px;){
+  .container{
+    max-width: 560px;
+  }
+  .header{
+    flex-wrap: wrap;
+  }
+  .search-form{
+    order: 5;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  .promo{
+      flex-wrap: wrap;
+    }
+  }
+
+@media (max-width: 576px;){
+  .container{
+    max-width: 90%;
+  }
+  .tabs-card{
+    max-width: 100%
+  }
 }
